@@ -1,0 +1,23 @@
+
+{% extends 'app/base.html' %}
+
+{% block content %}
+{% if ass_list %}
+{% for assign in ass_list%}
+<div class="post">
+    <div class="date">
+        <h3>Last Date of Submit: {{assign.submit_date }}</h3>
+    </div>
+    <h1><a href="">{{ assign.title }}</a></h1>
+    <p>{{ assign.description}}</p>
+    {% if assign.submit_date < today_date %}
+        You can not submit...!
+    {% elif  assign.submit_status == True%}
+        Already submitted
+    {% else %}
+    <a href="{% url 'detail' pk=assign.pk %} " class="btn btn-info">Detail</a>
+    {% endif %}
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

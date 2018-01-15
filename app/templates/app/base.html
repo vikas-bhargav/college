@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>My Assignment App</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+</head>
+<body>
+<div class="page-header">
+    {% if user.is_authenticated %}
+    <p class="top-menu"><h2>Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></h2></p>
+    {% else %}
+    <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+    {% endif %}
+    <h1><a href="/">Assignment List</a></h1>
+</div>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

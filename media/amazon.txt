@@ -1,0 +1,93 @@
+my_list = [i ** 2 for i in range(1, 11)]
+
+my_file = open("output.txt", "w")
+
+for item in my_list:
+  my_file.write(str(item) + "\n")
+  
+my_file.close()
+
+What do you think this program is doing?
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+19
+20
+
+
+Define a function, shut_down, that takes one argument. Then, if the shut_down function receives "yes", it should return "Shutting down"
+Alternatively, if it receives "no", then the function should return "Shutdown aborted".
+Finally, if shut_down gets anything other than those inputs, the function should return "Sorry"
+
+
+def shurt_down(arg):
+    if arg == 'yes':
+        retuen "Shuting down"
+    elsif arg == 'no':
+        return "Shutdown aborted"
+    else:
+        return "Sorry"
+
+shurt_down("yes")        
+
+
+suitcase = ["sunglasses", "hat", "passport", "laptop", "suit", "shoes"]
+Get me first 2, middle 2 and last 2 items from the suitcase list in the below variables and print them
+first =
+middle =
+last =
+
+
+first = [suitcase[i] for i  in range(0, 2) ]
+middle = [suitcase[i] for i  in range(2, 4) ]
+first = [suitcase[i] for i  in range(4, 6) ]
+
+list_of_lists = [[1, 2, 3], [4, 5, 6]]
+Could you please print all the items in this list sequentially
+
+new_list = list()
+for i in list_of_list:
+    new_list.append(list_of_list[i])
+print(new_list)    
+
+CREATE EMPLOYEE TABLE (
+    emp_id int UNIQUE
+    emp_name  varchar(20)
+    emp_salary int
+    )
+
+INSERT INTO EMPLOYEE (103, 'vIKAS bHARGAV', 3000)
+
+CREATE EMPLOYEECOPY FOR EMPLOYEE
+TRUNCATE TABLE EMPLOYEECOPY
+
+SELECT salary from  EMPLOYEE WHERE(salary>) 
+
+cat	subcat	val
+17	1	    40
+18	1	    30
+20	1	    38
+17	1	    34
+18	2	    38
+20	2	    39
+17	2	    30
+20	2	    33
+18	3	    34
+
+17-40
+
+SELET * FROM TABLE_NAME WHERE(cat=17 and val=40)
+
+Table_name.objects.filter(cat, val__gt=40)
+
+
+
+        
+      
